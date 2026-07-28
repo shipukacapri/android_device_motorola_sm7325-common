@@ -101,7 +101,7 @@ DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/custom/config/BoardConfigReservedSize.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
@@ -139,8 +139,8 @@ TARGET_RECOVERY_WIPE := $(COMMON_PATH)/recovery/recovery.wipe
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # SELinux
-include device/lineage/sepolicy/libion/sepolicy.mk
-include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+include device/custom/sepolicy/libion/sepolicy.mk
+include device/custom/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/motorola/sepolicy/qti/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
